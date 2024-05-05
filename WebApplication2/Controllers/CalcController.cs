@@ -45,19 +45,18 @@ namespace WebApplication2.Controllers
                 return View(c);
             }
 
-            c.totInWords = NumberToWords(c.tot); // Convert the result to word number
+            c.totInWords = NumberToWords(c.tot); 
             c.totInWordsC = NumberToWordsC(c.tot);
             c.totInWordsF = NumberToWordsF(c.tot);
             return View(c);
         }
 
-        // Helper method to convert number to word
+
         private string NumberToWords(decimal number)
         {
             if (number == 0)
                 return "zero";
 
-            // Handle negative numbers if needed
 
             string[] thousandsGroups = { "", " thousand", " million", " billion" };
 
@@ -115,9 +114,8 @@ namespace WebApplication2.Controllers
             if (number == 0)
                 return "零";
 
-            // Handle negative numbers if needed
 
-            string[] thousandsGroups = { "", "千", "百万", "十亿" }; // Adjust as needed for larger numbers
+            string[] thousandsGroups = { "", "千", "百万", "十亿" };
 
             int group = 0;
             string words = "";
@@ -173,9 +171,8 @@ namespace WebApplication2.Controllers
             if (number == 0)
                 return "zero";
 
-            // Handle negative numbers if needed
 
-            string[] thousandsGroups = { "", "libo", "milyon", "bilyon" }; // Adjust as needed for larger numbers
+            string[] thousandsGroups = { "", "libo", "milyon", "bilyon" };
 
             int group = 0;
             string words = "";

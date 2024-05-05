@@ -18,7 +18,7 @@ namespace WebApplication2.Models
 
         public calc()
         {
-            totInWords = ""; // Initialize totInWords in the constructor
+            totInWords = "";
             totInWordsC = "";
             totInWordsF = "";
         }
